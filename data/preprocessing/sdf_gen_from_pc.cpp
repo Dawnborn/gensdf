@@ -112,8 +112,8 @@ int main(int argc, char * argv[])
 
   std::cout << "Saving results...\n";
   std::string save_data_dir = argv[3];
-  if(!std::__fs::filesystem::is_directory(save_data_dir))
-    std::__fs::filesystem::create_directory(save_data_dir);
+  if(!std::filesystem::is_directory(save_data_dir))
+    std::filesystem::create_directory(save_data_dir);
   std::string sdf_file = save_data_dir + "/sdf_gt.csv";
   write_matrix_to_csv(sdf_file, SDFData);
 
